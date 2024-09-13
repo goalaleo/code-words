@@ -21,6 +21,46 @@
           "kind": "test",
           "isDefault": true
         }
+      },
+      {
+        "label": "testAll",
+        "detail": "Run all tests",
+        "type": "shell",
+        "command": "bundle exec rspec",
+        "group": {
+            "kind": "test"
+        },
+        "presentation": {
+            "reveal": "always",
+            "panel": "dedicated"
+        },
+      },
+      {
+        "label": "testFile",
+        "detail": "Run tests in current file",
+        "type": "shell",
+        "command": "bundle exec rspec ${relativeFile}",
+        "group": {
+            "kind": "test"
+        },
+        "presentation": {
+            "reveal": "always",
+            "panel": "dedicated"
+        },
+      },
+      {
+        "label": "testLine",
+        "detail": "Run test(s) based on current cursor position",
+        "type": "shell",
+        "command": "bundle exec rspec ${relativeFile}:${lineNumber}",
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        },
+        "presentation": {
+            "reveal": "always",
+            "panel": "dedicated"
+        },
       }
     ]
   }
