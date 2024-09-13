@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Check or Create and Run Spec",
+        "type": "shell",
+        "command": "/bin/zsh",
+        "args": [
+          "-c",
+          "source ~/.zshrc && run_or_create_spec '${file}'"
+        ],
+        "problemMatcher": [],
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared",
+          "clear": true
+        },
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        }
+      }
+    ]
+  }
